@@ -51,7 +51,7 @@ Qué pasa cuando se riega una planta:
 |---|---|
 | **Maíz**   | Si es bebé, pasa a adulta, y la imagen cambia a `corn_adult.png`. <br> Si ya es adulta, no hacer nada |
 | **Trigo**  | Pasa a la etapa de evolución siguiente: de 0 a 1, de 1 a 2, de 2 a 3, de 3 vuelve a 0. <br> La imagen cambia a `wheat_x.png`, donde la x corresponde a la etapa de evolución. |
-| **Tomaco** | Se mueve a la celda de arriba. <br> Si ya está en el borde de arriba, no hace nada (o pasa abajo de todo :D) | 
+| **Tomaco** | Se mueve a la celda de arriba. <br> Si ya está en el borde de arriba, no hace nada (o pasa abajo de todo :D) |
   
 
 
