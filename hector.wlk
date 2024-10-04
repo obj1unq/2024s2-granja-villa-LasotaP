@@ -52,4 +52,17 @@ object hector {
 		self.validarRegar()
 		granja.cultivoEn(self.position()).regar()
 	}
+
+	method cosecharCultivo() {
+		self.validarCosechar()
+		granja.cultivoEn(self.position()).cosechar()
+	}
+
+	method validarCosechar() {
+	  	if (not granja.hayAlgoAca(self.position())) {
+			self.error("No hay nada para cosechar!")
+		} else if ( not granja.cultivoEn(self.position()).listaParaCosechar()){
+			self.error("Este cultivo no esta listo para cosechar!")
+		}
+	}
 }

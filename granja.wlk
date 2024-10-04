@@ -22,4 +22,5 @@ object granja {
     method cultivoEn(posicion) {
         return if(self.hayAlgoAca(posicion)) {self.plantaciones().find({a => a.position() == posicion})}
     }
+
 }

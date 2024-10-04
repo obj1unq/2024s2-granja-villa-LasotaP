@@ -9,6 +9,9 @@ class Maiz {
 		self.image("corn_adult.png")
 		self.image()
 	}
+	method cosechar() {
+		
+	}
 }
 class Trigo {
 	var property position
