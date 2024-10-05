@@ -82,7 +82,7 @@ Al hacerlo, obtiene el oro por cada planta que tiene, de acuerdo a esta especifi
 - **Trigo**: 100 monedas si está en etapa 2, 200 si está en etapa 3. La cuenta cheta es `(etapa - 1) * 100`.
 - **Tomaco**: 80 monedas por planta.
 
-Héctor debe acumular el oro y recordar cuánto oro obtuvo en total. Al presionar la barra espaciadora, queremos que Héctor nos diga: cuántas plantas tiene para vender, y cuánto oro juntó en total.  
+Héctor debe acumular el oro y recordar cuánto oro obtuvo en total. Al presionar la barra espaciadora, queremos que Héctor nos diga: cuántas plantas tiene para vender, y cuánto oro juntó en total. 
 P.ej. "tengo 800 monedas, y 3 plantas para vender".
 
 **Atenti**  

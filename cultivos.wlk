@@ -9,9 +9,10 @@ class Maiz {
 		self.image("corn_adult.png")
 		self.image()
 	}
-	method cosechar() {
-		
+	method listaParaCosechar() {
+		return self.image() == "corn_adult.png"
 	}
+	method costo() = 150
 }
 class Trigo {
 	var property position
@@ -27,6 +28,10 @@ class Trigo {
 			image = "wheat_0.png"
 	   }
 	}
+	method listaParaCosechar() {
+		return etapaEvolucion > 1
+	}
+	method costo() = (etapaEvolucion-1)*100
 }
 
 class Tomaco {
@@ -40,4 +45,8 @@ class Tomaco {
 			self.position(game.at(self.position().x(),0))
 		}
 	}
+	method listaParaCosechar() {
+		return true
+	}
+	method costo() = 80
 }

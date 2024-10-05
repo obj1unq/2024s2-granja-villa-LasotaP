@@ -6,6 +6,8 @@ import granja.*
 object hector {
 	var property position = game.center()
 	const property image = "player.png"
+	const property listaCosechados = #{}
+	var monedas = 0
 
 	method mover(direccion) {
 		self.validarMover(direccion)
@@ -55,7 +57,7 @@ object hector {
 
 	method cosecharCultivo() {
 		self.validarCosechar()
-		granja.cultivoEn(self.position()).cosechar()
+		granja.cosecharCulivoEn(self.position())
 	}
 
 	method validarCosechar() {
@@ -64,5 +66,15 @@ object hector {
 		} else if ( not granja.cultivoEn(self.position()).listaParaCosechar()){
 			self.error("Este cultivo no esta listo para cosechar!")
 		}
+	}
+
+	method vender() {
+		monedas = listaCosechados.sum({planta => planta.costo()})
+		listaCosechados.removeAll()
+	}
+
+
+	method hablar() {
+		game.say(self, "Tengo "+monedas+" monedas, y "+listaCosechados.size()+" plantas para vender")
 	}
 }

@@ -23,4 +23,13 @@ object granja {
         return if(self.hayAlgoAca(posicion)) {self.plantaciones().find({a => a.position() == posicion})}
     }
 
+    method cosecharCulivoEn(posicion) {
+        return if(self.hayAlgoAca(posicion)) {
+            hector.listaCosechados().add(self.cultivoEn(posicion))
+            game.removeVisual(self.cultivoEn(posicion))
+            self.plantaciones().remove(self.cultivoEn(posicion))
+        }
+    }
+    
+
 }

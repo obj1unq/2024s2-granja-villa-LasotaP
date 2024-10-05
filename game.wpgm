@@ -2,6 +2,7 @@ import wollok.game.*
 import hector.*
 import cultivos.*
 import posiciones.*
+import granja.*
 
 program farmville {
 	//  CONFIG	
@@ -24,6 +25,8 @@ program farmville {
 	keyboard.t().onPressDo({hector.sembrarTrigo()})
 	keyboard.o().onPressDo({hector.sembrarTomaco()})
 	keyboard.r().onPressDo({hector.regarCultivo()})
+	keyboard.c().onPressDo({hector.cosecharCultivo()})
+	keyboard.space().onPressDo({hector.hablar()})
 
 
  	//  COMIENZA
