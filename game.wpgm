@@ -26,6 +26,7 @@ program farmville {
 	keyboard.o().onPressDo({hector.sembrarTomaco()})
 	keyboard.r().onPressDo({hector.regarCultivo()})
 	keyboard.c().onPressDo({hector.cosecharCultivo()})
+	keyboard.v().onPressDo({hector.vender()})
 	keyboard.space().onPressDo({hector.hablar()})
 
 

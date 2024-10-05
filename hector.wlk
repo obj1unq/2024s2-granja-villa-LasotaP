@@ -57,6 +57,7 @@ object hector {
 
 	method cosecharCultivo() {
 		self.validarCosechar()
+
 		granja.cosecharCulivoEn(self.position())
 	}
 
@@ -70,7 +71,7 @@ object hector {
 
 	method vender() {
 		monedas = listaCosechados.sum({planta => planta.costo()})
-		listaCosechados.removeAll()
+		listaCosechados.clear()
 	}
 
 
