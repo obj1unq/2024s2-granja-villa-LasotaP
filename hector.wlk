@@ -7,7 +7,7 @@ object hector {
 	var property position = game.center()
 	const property image = "player.png"
 	const property listaCosechados = #{}
-	var monedas = 0
+	var property monedas = 0
 
 	method mover(direccion) {
 		self.validarMover(direccion)
@@ -57,7 +57,6 @@ object hector {
 
 	method cosecharCultivo() {
 		self.validarCosechar()
-
 		granja.cosecharCulivoEn(self.position())
 	}
 

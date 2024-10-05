@@ -1,9 +1,36 @@
 import cultivos.*
+import wollok.game.*
+import hector.*
+import posiciones.*
+import granja.*
 
-describe "group of tests for pepita" {
+describe "all tests" {
 
-  test "pepita has initial energy" {
-    
+  test "hector siembra Maiz, lo riega, lo cosecha y lo vende (SOLO MAIZ y solo una cosa)" {
+      hector.sembrarMaiz()
+      assert.equals("corn_baby.png", granja.cultivoEn(hector.position()).image())
+      hector.regarCultivo()
+      assert.equals("corn_adult.png", granja.cultivoEn(hector.position()).image())
+      hector.cosecharCultivo()
+      assert.notEquals(#{}, hector.listaCosechados())
+      hector.vender()
+      assert.equals(150, hector.monedas())
+      assert.equals(#{}, hector.listaCosechados())
+  }
+
+    test "hector siembra mas de una planta, lo riega, lo cosecha y lo vende (varias cosas en la misma celda)" {
+      hector.sembrarMaiz()
+      hector.regarCultivo()
+      hector.cosecharCultivo()
+      hector.sembrarTrigo()
+      hector.regarCultivo()
+      hector.regarCultivo()
+      hector.regarCultivo()
+      hector.cosecharCultivo()
+      assert.notEquals(#{}, hector.listaCosechados())
+      hector.vender()
+      assert.equals(350, hector.monedas())
+      assert.equals(#{}, hector.listaCosechados())
   }
 
 }
